@@ -1,0 +1,14 @@
+[user]
+	name =
+	email =
+
+[alias]
+	glog = log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph
+	log3 = log -n3 --pretty=oneline
+	log5 = log -n5 --pretty=oneline
+	log10 = log -n5 --pretty=oneline
+	siff = diff --staged
+	co = checkout
+	st = status
+  fzadd = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t -o git add"
+
