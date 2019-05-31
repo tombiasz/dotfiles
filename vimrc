@@ -27,6 +27,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdtree'
   Plug 'HerringtonDarkholme/yats.vim'
   " Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+  Plug 'gertjanreynaert/cobalt2-vim-theme'
 call plug#end()
 
 
@@ -46,10 +47,10 @@ set undolevels=100
 
 
 " INDENTATION
-set expandtab 
+set expandtab
 set shiftround
 set autoindent
-set copyindent 
+set copyindent
 
 set shiftwidth=2
 set softtabstop=2
@@ -68,7 +69,8 @@ set showmatch
 set cursorline
 
 set background=dark
-colorscheme solarized
+" colorscheme solarized
+colorscheme cobalt2
 
 
 highlight CursorLine ctermbg=238
@@ -163,4 +165,3 @@ let g:tsuquyomi_disable_quickfix = 1
 
 " nerdtree
 map <leader>b :NERDTreeToggle<CR>
-
