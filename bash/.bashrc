@@ -45,23 +45,11 @@ function parse_git_dirty {
 	fi
 }
 
-export PS1=" \[\e[96m\]\W\[\e[m\] \[\e[95m\]\`parse_git_branch\`\[\e[m\] \\$ "
-export CLICOLOR=1
-export TERM=xterm-256color
-export GREP_OPTIONS='--color=auto'
-
-alias ls='ls -GFh'
+# grep with color
 alias grep='grep --color=auto'
-alias egrep="egrep --color=auto'"
-alias fgrep="fgrep --color=auto'"
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[ -f /Users/tomasz/.config/yarn/global/node_modules/tabtab/.completions/serverless.bash ] && . /Users/tomasz/.config/yarn/global/node_modules/tabtab/.completions/serverless.bash
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[ -f /Users/tomasz/.config/yarn/global/node_modules/tabtab/.completions/sls.bash ] && . /Users/tomasz/.config/yarn/global/node_modules/tabtab/.completions/sls.bash
+# format propmt
+export PS1=" \[\e[96m\]\W\[\e[m\] \[\e[95m\]\`parse_git_branch\`\[\e[m\] \\$ "
+
+# start fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-# added by travis gem
-[ -f /Users/tomasz/.travis/travis.sh ] && source /Users/tomasz/.travis/travis.sh
